@@ -37,3 +37,5 @@ Route::get('/promotion', function () {
 })->middleware(['auth', 'verified'])->name('promotion');
 
 require __DIR__.'/auth.php';
+
+Route::view('book','book');
