@@ -28,4 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/bookings_history', function () {
+    return view('bookings_history');
+})->middleware(['auth', 'verified'])->name('bookings_history');
+
+Route::get('/promotion', function () {
+    return view('promotion');
+})->middleware(['auth', 'verified'])->name('promotion');
+
 require __DIR__.'/auth.php';
