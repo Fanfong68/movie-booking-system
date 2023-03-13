@@ -35,8 +35,12 @@
                             <div class = "movie">
                                 <a href="select_movie">
                                     <img src="{{ asset($movie->poster) }}">
+                                    <div class="middle">
+                                        <div class="text">Book Now</div>
+                                    </div>
                                     <p style="text-align:center">{{ __($movie->name) }}<p>
                                 </a>
+                                
                             </div>
                         @endforeach
                     </div>
