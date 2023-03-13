@@ -1,3 +1,6 @@
+<?php
+    use App\Models\Movie;
+?>
 <x-app-layout>
     <meta name="vi" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -40,21 +43,11 @@
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     {{ __('All Movie') }}
                     <div class = "movie_container">
-                        <div class = "movie">
-                            <img src="{{ asset('assets/movie_img0.jpg') }}">
-                        </div>
-                        <div class = "movie">
-                            <img src="{{ asset('assets/movie_img1.jpg') }}">
-                        </div>
-                        <div class = "movie">
-                            <img src="{{ asset('assets/movie_img2.jpg') }}">
-                        </div>
-                        <div class = "movie">
-                            <img src="{{ asset('assets/movie_img3.jpg') }}">
-                        </div>
-                        <div class = "movie">
-                            <img src="{{ asset('assets/movie_img4.jpg') }}">
-                        </div>
+                        @foreach(Movie::all() as $movie)
+                            <div class = "movie">
+                                <img src="{{ asset($movie->poster) }}">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

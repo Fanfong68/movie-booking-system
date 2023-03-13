@@ -18,11 +18,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
-
-
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -32,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
 
+    Route::get('/movies', [BookingController::class, 'showMovies']);
 });
 
 
