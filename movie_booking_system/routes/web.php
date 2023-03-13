@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('/dashboard','dashboard' )->name('dashboard');
     Route::view('/promotion','promotion' )->name('promotion');
-    Route::view('/dashbobookings_historyard','bookings_history' )->name('bookings_history');
+    Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
 
 });
