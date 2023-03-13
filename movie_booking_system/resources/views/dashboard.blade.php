@@ -4,19 +4,7 @@
 <x-app-layout>
     <meta name="vi" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        .mySlides {display:none}
-        .w3-left, .w3-right, .w3-badge {cursor:pointer}
-        .w3-badge {height:13px;width:13px;padding:0}
-        
-        .movie{
-            padding:15px;
-        }
-        .movie_container{
-            display:flex;
-            justify-content:space-around;
-        }
-    </style>
+    <link rel="stylesheet" href="css/dashboard.css">
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -55,32 +43,5 @@
         </div>
     </div>
 
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-        showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-        showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" w3-white", "");
-        }
-        x[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " w3-white";
-        }
-    </script>
+    <script src="js/dashboard.js"></script>
 </x-app-layout> 
