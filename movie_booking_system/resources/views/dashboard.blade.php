@@ -33,8 +33,10 @@
                     <div class = "movie_container">
                         @foreach(Movie::all() as $movie)
                             <div class = "movie">
-                                <img src="{{ asset($movie->poster) }}">
-                                <p style="text-align:center">{{ __($movie->name) }}<p>
+                                <a href="select_movie">
+                                    <img src="{{ asset($movie->poster) }}">
+                                    <p style="text-align:center">{{ __($movie->name) }}<p>
+                                </a>
                             </div>
                         @endforeach
                     </div>
