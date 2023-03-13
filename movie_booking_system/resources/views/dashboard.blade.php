@@ -13,16 +13,6 @@
         </h2>
     </x-slot>
 
-    <!-- <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="w3-content w3-display-container" style="max-width:100%; height:600px">
         <img class="mySlides" src="{{ asset('assets/Movie2_poster.jpg') }}" style="width:100%; height:600px">
         <img class="mySlides" src="{{ asset('assets/Movie3_poster.jpg') }}" style="width:100%; height:600px">
@@ -33,6 +23,16 @@
             <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
             <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
             <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+
+    <div class="py-12">
+        <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
+                    {{ __('All Movie') }}
+                </div>
+            </div>
         </div>
     </div>
 
