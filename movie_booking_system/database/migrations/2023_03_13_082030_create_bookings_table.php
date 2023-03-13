@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->integer('movieid');
+            $table->integer('userid');
+            $table->string('location');
+            $table->dateTime('time');
             $table->timestamps();
         });
     }
