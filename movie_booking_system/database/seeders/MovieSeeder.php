@@ -15,13 +15,13 @@ class MovieSeeder extends Seeder
     public function run(): void
     {
         DB::table('movies')->insert([
-            'name'=>'',
-            'poster'=>'',
-            'genre'=>'',
-            'duration'=>'',
-            'language'=>'',
-            'desc'=>'',
-            'nowShowing'=>'',
+            'name'=>"Air Force",
+            'poster'=>"assets/movie_img0.jpg",
+            'genre'=>"cincai",
+            'duration'=>"1 hr 30 mins",
+            'language'=>"en",
+            'desc'=>"shushushu",
+            'nowShowing'=>true,
         ]);
     }
 }
