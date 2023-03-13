@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::view('/promotion','promotion' )->name('promotion');
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
+    Route::view('/select_movie','select_movie')->name('select_movie');
 
     Route::get('/movies', [BookingController::class, 'showMovies']);
 });

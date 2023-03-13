@@ -41,11 +41,12 @@
         <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
-                    {{ __('All Movie') }}
+                    {{ __('All Movies') }}
                     <div class = "movie_container">
                         @foreach(Movie::all() as $movie)
                             <div class = "movie">
                                 <img src="{{ asset($movie->poster) }}">
+                                <p style="text-align:center">{{ __($movie->name) }}<p>
                             </div>
                         @endforeach
                     </div>
