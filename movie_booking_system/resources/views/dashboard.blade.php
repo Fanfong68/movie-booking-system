@@ -5,6 +5,14 @@
         .mySlides {display:none}
         .w3-left, .w3-right, .w3-badge {cursor:pointer}
         .w3-badge {height:13px;width:13px;padding:0}
+        
+        .movie{
+            padding:15px;
+        }
+        .movie_container{
+            display:flex;
+            justify-content:space-around;
+        }
     </style>
 
     <x-slot name="header">
@@ -31,6 +39,23 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     {{ __('All Movie') }}
+                    <div class = "movie_container">
+                        <div class = "movie">
+                            <img src="{{ asset('assets/movie_img0.jpg') }}">
+                        </div>
+                        <div class = "movie">
+                            <img src="{{ asset('assets/movie_img1.jpg') }}">
+                        </div>
+                        <div class = "movie">
+                            <img src="{{ asset('assets/movie_img2.jpg') }}">
+                        </div>
+                        <div class = "movie">
+                            <img src="{{ asset('assets/movie_img3.jpg') }}">
+                        </div>
+                        <div class = "movie">
+                            <img src="{{ asset('assets/movie_img4.jpg') }}">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
