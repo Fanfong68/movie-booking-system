@@ -69,7 +69,7 @@
             <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                 <div class="button-container" id="button-container">
                 <?php for ($i = 1; $i <= 5; $i++) { ?>
-                    <div class="date-button" onclick="toggleColor(this)" data-index="<?php echo $i; ?>">
+                    <div class="date-button" onclick="toggleColor(this)" data-index="date_<?php echo $i; ?>">
                         <span><?php echo $i; ?></span><br>
                         <span class="smaller">Mar</span>
                     </div>
@@ -80,9 +80,16 @@
         <h2 class="p-6 text-xl text-gray-900 dark:text-gray-100">{{ __('Select Time') }}</h2>
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
-                {{ __('All Time and Cinema Show Here') }}
+                <div class="button-container" id="button-container">
+                <?php for ($i = 1; $i <= 5; $i++) { ?>
+                    <div class="time-button" onclick="toggleColor2(this)" data-index="time_<?php echo $i; ?>">
+                        <span><?php echo $i; ?></span><br>
+                        <span class="smaller">Mar</span>
+                    </div>
+                <?php } ?>
+                </div>
             </div>
         </div>
     </body>
 
-  </x-app-layout> 
+  </x-app-layout>
