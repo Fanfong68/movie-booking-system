@@ -10,7 +10,5 @@ use App\Models\Booking;
 
 class BookingController extends Controller
 {
-    function showMovies(){
-        return Movie::all();
-    }
+    
 }

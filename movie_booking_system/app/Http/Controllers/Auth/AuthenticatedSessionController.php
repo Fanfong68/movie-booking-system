@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -29,6 +30,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        $data= $request->input();
+        $request->session()->put('userid',$data['email']);
+
         return redirect()->intended(RouteServiceProvider::HOME);
     }
 
@@ -40,7 +44,7 @@ class AuthenticatedSessionController extends Controller
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
-
+        $request->session()->pull('userid');
         $request->session()->regenerateToken();
 
         return redirect('/');

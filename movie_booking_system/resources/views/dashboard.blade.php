@@ -48,6 +48,6 @@
             </div>
         </div>
     </div>
-
+  
     <script src="js/dashboard.js"></script>
 </x-app-layout> 

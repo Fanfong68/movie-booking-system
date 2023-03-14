@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Providers\RouteServiceProvider;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',function(){
+    if(session()->has('userid')){
+        return redirect()->intended(RouteServiceProvider::HOME);
+    }
     return view('auth.login');
-});
+})->name('login');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -27,7 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
     Route::view('/select_movie','select_movie')->name('select_movie');
-
+  
     Route::get('/movies', [BookingController::class, 'showMovies']);
 });
 
