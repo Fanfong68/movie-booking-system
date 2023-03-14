@@ -18,4 +18,27 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-  });
+});
+
+const buttons = document.querySelectorAll('.date-button');
+let selectedButton = null;
+
+function toggleColor(element) {
+    if (selectedButton !== null && selectedButton != element) {
+        selectedButton.classList.remove('selected');
+    }
+
+    element.classList.toggle('selected');
+    selectedButton = element.classList.contains('selected') ? element : null;
+
+    // get the index of the clicked button
+    const index = parseInt(element.dataset.index);
+    console.log('Clicked button index:', index);
+}
+
+// add event listener to each button
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        toggleColor(button);
+    });
+});
