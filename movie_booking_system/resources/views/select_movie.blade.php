@@ -23,12 +23,11 @@
                                     <img src="{{ asset($movie->poster) }}" alt="Tranding">
                                 </div>
                                 <div class="tranding-slide-content">
-                                    <h1 class="food-price">$20</h1>
                                     <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
+                                    <p class="movie-name">
                                         {{ __($movie->name) }}
-                                    </h2>
-                                    <h3 class="food-rating">
+                                    </p>
+                                    <h3 class="movie-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                         <ion-icon name="star"></ion-icon>
