@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
     Route::view('/select_movie','select_movie')->name('select_movie');
+    Route::view('/select_seat','select_seat')->name('select_seat');
   
     Route::get('/movies', [BookingController::class, 'showMovies']);
 });

@@ -247,6 +247,20 @@ body {
     cursor: pointer;
 }
 
+.cinema-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    border-radius: 15%;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .smaller {
     font-size: 12px;
 }
@@ -254,4 +268,21 @@ body {
 .selected {
     background-color: yellow;
     color: black;
+}
+
+.page-container {
+    padding-bottom: 50px;
+}
+
+.proceed{
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #e88122;
+    text-align: center;
+    display: none;
+    cursor: pointer;
 }

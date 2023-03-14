@@ -1,0 +1,20 @@
+.page-container {
+    padding-bottom: 50px;
+}
+
+.proceed{
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #e88122;
+    text-align: center;
+    cursor: pointer;
+}
+
+.proceed .text{
+    margin-top: 10px;
+    font-size: 20px;    
+}
