@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 use App\Providers\RouteServiceProvider;
 /*
@@ -15,7 +16,7 @@ use App\Providers\RouteServiceProvider;
 */
 
 Route::get('/',function(){
-    if(session()->has('userid')){
+    if(session()->getId()){
         return redirect()->intended(RouteServiceProvider::HOME);
     }
     return view('auth.login');
@@ -30,9 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
     Route::view('/select_movie','select_movie')->name('select_movie');
-    Route::view('/select_seat','select_seat')->name('select_seat');
-  
-    Route::get('/movies', [BookingController::class, 'showMovies']);
+    Route::view('/select_seat/{data}','select_seat')->name('select_seat');
+   
+    Route::post('/submit_info',[BookingController::class,'submit_info'])->name('submit_info');
 });
 
 

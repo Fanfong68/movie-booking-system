@@ -49,6 +49,7 @@ function checkSelection() {
   } else {
     console.log('Not all three buttons are selected.');
     document.getElementById("proceed").style["display"] = "none";
+
   }
 }
 
@@ -62,6 +63,7 @@ function toggleDate(element) {
 
   const date_index = parseInt(element.dataset.index);
   console.log('Clicked button index:', date_index);
+  document.getElementById("date").value=date_index;
 
   checkSelection();
 }
@@ -76,7 +78,7 @@ function toggleTime(element) {
 
   const time_index = parseInt(element.dataset.index);
   console.log('Clicked button index:', time_index);
-
+  document.getElementById("time").value=time_index;
   checkSelection();
 }
 
@@ -90,7 +92,7 @@ function toggleCinema(element) {
 
   const cinema_index = parseInt(element.dataset.index);
   console.log('Clicked button index:', cinema_index);
-
+  document.getElementById("cinema").value=cinema_index;
   checkSelection();
 }
 

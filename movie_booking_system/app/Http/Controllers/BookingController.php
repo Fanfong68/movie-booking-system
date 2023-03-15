@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
-use App\Models\Movie;
-use App\Models\Booking;
+
 
 class BookingController extends Controller
 {
-    
+    public function submit_info(Request $request){
+        $data=$request->input();;
+        return view('/select_seat',['data'=>$data]);
+    }
 }
