@@ -7,6 +7,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/select_seat.css">
     </head>
 
@@ -24,7 +26,7 @@
                 <tr>
                     <?php for($i=0;$i<5;$i++) { ?>
                         <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat"></div>
+                            <div class="seat" onclick="toggleSeat(this)"></div>
                         </td>
                     <?php $z++; } ?>
 
@@ -32,7 +34,7 @@
 
                     <?php for($i=0;$i<15;$i++) { ?>
                         <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat"></div>
+                            <div class="seat" onclick="toggleSeat(this)"></div>
                         </td>
                     <?php $z++; } ?>
 
@@ -40,7 +42,7 @@
 
                     <?php for($i=0;$i<5;$i++) { ?>
                         <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat"></div>
+                            <div class="seat" onclick="toggleSeat(this)"></div>
                         </td>
                     <?php $z++; } ?>
                 </tr>
@@ -48,8 +50,19 @@
             </table>
             <script src="js/select_seat.js"></script>
         </div>
+        <div id="overlay-receipt-container">
+            <div id="receipt-container">
+                <div class="close-btn">
+                    <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
+                </div>
+                <div id="text-receipt">Receipt</div>
+                <div id="payment" class="payment w3-animate-bottom">
+                    <div class="text">{{ __('Proceed Payment') }}</div>
+                </div>
+            </div>
+        </div>
         <div class="page-container">
-            <div id="proceed" class="proceed">
+            <div id="proceed" class="proceed w3-animate-bottom">
                 <div class="text">{{ __('Confirm') }}</div>
             </div>
         </div>

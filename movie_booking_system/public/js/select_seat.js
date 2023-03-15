@@ -1,13 +1,39 @@
 allSeats = document.querySelectorAll('.seat');
+var count = 0;
 
-for (var i = 0; i < allSeats.length; i++) {
-    var seat = allSeats[i];
-    seat.addEventListener('click', function () {
-        var bgclr = this.style.backgroundColor;
-        if(bgclr =='red')
-            this.style.backgroundColor = 'white'
-        else
-            this.style.backgroundColor = 'red'
-        debugger
-    }, false);
+function checkSelection(){
+    if(count > 0){
+        console.log('seat selected');
+
+        document.getElementById("proceed").style["display"] = "block";
+
+        const proceedButton = document.getElementById('proceed');
+        proceedButton.addEventListener('click', () => {
+            console.log('Button clicked!');
+            on();
+        });
+    }else{
+        document.getElementById("proceed").style["display"] = "none";
+    }
 }
+
+function toggleSeat(element){
+    element.classList.toggle("selected");
+    if(element.classList.contains('selected')){
+        count++;
+    }else{
+        count--;
+    }
+
+    checkSelection();
+}
+
+function on() {
+    document.getElementById("overlay-receipt-container").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay-receipt-container").style.display = "none";
+}
+
+
