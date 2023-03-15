@@ -21,7 +21,7 @@
                             <div class="swiper-wrapper">
                                 @foreach(Movie::all() as $movie)
                                     <!-- Slide-start -->
-                                    <div class="swiper-slide tranding-slide">
+                                    <div class="swiper-slide tranding-slide" value="{{$movie->id}}">
                                         <div class="tranding-slide-img">
                                             <img src="{{ asset($movie->poster) }}" alt="Tranding">
                                         </div>
@@ -106,6 +106,7 @@
             </div>
             <form action='/submit_info' method='POST'>
                 @csrf
+                <input type="text" id="movie" name="movie" value='0' hidden>
                 <input type="text" id="date" name="date" value='0' hidden>
                 <input type="text" id="time" name="time" value='0' hidden>
                 <input type="text" id="cinema" name="cinema" value='0' hidden>
