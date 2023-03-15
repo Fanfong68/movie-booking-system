@@ -57,7 +57,7 @@
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
                 <div id="text-receipt">Receipt</div>
-                <div id="payment" class="payment w3-animate-bottom" onclick="off();loading()">
+                <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
                     <div class="text">{{ __('Proceed Payment') }}</div>
                 </div>
             </div>
