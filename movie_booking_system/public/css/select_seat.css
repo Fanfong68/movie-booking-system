@@ -53,6 +53,7 @@
     cursor:pointer;
     background-color:white;
     text-align: center;
+    border-radius: 40%;
 }
 
 .selected{

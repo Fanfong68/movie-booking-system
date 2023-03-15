@@ -40,7 +40,7 @@ function off() {
 function loading(){
     document.getElementById("overlay-loading").style.display = "block";
     setTimeout(function() {
-        window.location.href = 'dashboard'
+        window.location.href = 'bookings_history'
     }, 2000); // 2 second
 }
 
