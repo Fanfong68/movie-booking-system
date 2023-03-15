@@ -57,9 +57,14 @@
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
                 <div id="text-receipt">Receipt</div>
-                <div id="payment" class="payment w3-animate-bottom">
+                <div id="payment" class="payment w3-animate-bottom" onclick="off();loading()">
                     <div class="text">{{ __('Proceed Payment') }}</div>
                 </div>
+            </div>
+        </div>
+        <div id="overlay-loading">
+            <div id="loading-container">
+                <p><i class="fa fa-spinner w3-text-white w3-spin" style="font-size:64px"></i></p>
             </div>
         </div>
         <div class="page-container">

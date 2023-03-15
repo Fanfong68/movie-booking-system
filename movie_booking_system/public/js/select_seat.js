@@ -36,4 +36,11 @@ function off() {
     document.getElementById("overlay-receipt-container").style.display = "none";
 }
 
+function loading(){
+    document.getElementById("overlay-loading").style.display = "block";
+    setTimeout(function() {
+        window.location.href = 'dashboard'
+    }, 2000); // 2 second
+}
+
 
