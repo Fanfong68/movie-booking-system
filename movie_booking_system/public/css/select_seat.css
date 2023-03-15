@@ -18,3 +18,42 @@
     margin-top: 10px;
     font-size: 20px;    
 }
+
+.seat-container{
+    border:1px solid gray; 
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.seat{
+    height: 20px;
+    width: 30px;
+    border: 1px solid gray;
+    cursor:pointer;
+    background-color:white;
+    text-align: center;
+}
+
+#screen {
+    background-color:gray;          
+    height: 40px;
+    width: 1000px;
+    text-align: center;
+}
+
+.gap{
+    height: 50px;
+    
+}
+
+.row{
+    padding-top: 10px;
+}
+
+.walk{
+    width: 100px;
+}
