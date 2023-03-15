@@ -104,7 +104,8 @@
                     </div>
                 </div>
             </div>
-            <form action="/submit_info" method="POST">
+            <form action='/submit_info' method='POST'>
+                @csrf
                 <input type="text" id="date" name="date" value='' hidden>
                 <input type="text" id="time" name="time" value='' hidden>
                 <input type="text" id="cinema" name="cinema" value='' hidden>
@@ -113,7 +114,7 @@
                         <div class="text">{{ __('Select Seat') }}</div>
                     </div>
                 </button>
-            <form>
+            </form>
         </div>
     </body>
 
