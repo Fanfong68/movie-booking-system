@@ -104,11 +104,16 @@
                     </div>
                 </div>
             </div>
-            <a href="select_seat">
-                <div id="proceed" class="proceed w3-animate-bottom">
-                    <div class="text">{{ __('Select Seat') }}</div>
-                </div>
-            </a>
+            <form action="/submit_info" method="POST">
+                <input type="text" id="date" name="date" value='' hidden>
+                <input type="text" id="time" name="time" value='' hidden>
+                <input type="text" id="cinema" name="cinema" value='' hidden>
+                <button type="submit">
+                    <div id="proceed" class="proceed w3-animate-bottom">
+                        <div class="text">{{ __('Select Seat') }}</div>
+                    </div>
+                </button>
+            <form>
         </div>
     </body>
 

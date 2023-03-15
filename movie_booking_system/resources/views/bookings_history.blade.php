@@ -14,5 +14,5 @@
             </div>
         </div>
     </div>
-    <h1>vdvsvsdvsd, {{session('userid')}}</h1>
+    <h1>User id: {{ Auth::user()->id }}</h1>
 </x-app-layout>
