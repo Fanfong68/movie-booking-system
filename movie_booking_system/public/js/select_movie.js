@@ -115,4 +115,22 @@ cinemaButtons.forEach(button => {
 });
 
 
+TrandingSlider.on('transitionEnd', function() {
+  getSelectingMovie();
+});
 
+
+
+
+
+function getSelectingMovie(){
+  const elements = document.getElementsByClassName("swiper-slide tranding-slide");
+  for (let i = 0; i < elements.length; i++) {
+    
+    if (elements[i].style.zIndex ==="1") {
+      // Do something with the element
+      console.log(elements[i].getAttribute('value'));
+      document.getElementById("movie").value = elements[i].getAttribute('value');
+    }
+  }
+}

@@ -13,7 +13,7 @@
     </head>
 
     <body>
-       
+       <p>{{$data['movie']}}</p>
         <div class="seat-container">
             <table>
                 <tr>
