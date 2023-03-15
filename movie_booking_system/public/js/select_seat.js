@@ -20,6 +20,7 @@ function checkSelection(){
 function toggleSeat(element){
     element.classList.toggle("selected");
     if(element.classList.contains('selected')){
+        document.getElementById("seat").value = element.getAttribute('value');
         count++;
     }else{
         count--;

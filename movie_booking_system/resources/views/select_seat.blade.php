@@ -13,7 +13,7 @@
     </head>
 
     <body>
-       <p>{{$data['movie']}}</p>
+       
         <div class="seat-container">
             <table>
                 <tr>
@@ -26,24 +26,24 @@
                     $z = 1;?>
                 <tr>
                     <?php for($i=0;$i<5;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row" >
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
                     <td class="walk"></td>
 
                     <?php for($i=0;$i<15;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row">
+                            <div class="seat" onclick="toggleSeat(this)"  value="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
                     <td class="walk"></td>
 
                     <?php for($i=0;$i<5;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row" >
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
                 </tr>
@@ -57,9 +57,13 @@
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
                 <div id="text-receipt">Receipt</div>
-                <div id="payment" class="payment w3-animate-bottom" onclick="off();loading()">
-                    <div class="text">{{ __('Proceed Payment') }}</div>
-                </div>
+                <form>
+                    @csrf
+                    <input type="text" id="seat[]" name="seat" value='' hidden>
+                    <div id="payment" class="payment w3-animate-bottom" onclick="off();loading()">
+                        <div class="text">{{ __('Proceed Payment') }}</div>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="overlay-loading">
@@ -67,10 +71,16 @@
                 <p><i class="fa fa-spinner w3-text-white w3-spin" style="font-size:64px"></i></p>
             </div>
         </div>
+        
+           
+           
         <div class="page-container">
             <div id="proceed" class="proceed w3-animate-bottom">
                 <div class="text">{{ __('Confirm') }}</div>
             </div>
+    
         </div>
+           
+        
     </body>
 </x-app-layout>
