@@ -10,4 +10,6 @@ for (var i = 0; i < allSeats.length; i++) {
             this.style.backgroundColor = 'red'
         debugger
     }, false);
+
+    
 }

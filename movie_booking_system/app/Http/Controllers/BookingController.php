@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
     public function submit_info(Request $request){
-        return redirect('/dashboard');
+        $data=$request->input();;
+        return view('/select_seat',['data'=>$data]);
     }
 }
