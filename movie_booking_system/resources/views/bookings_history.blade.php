@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </body>
 
     @can('isAdmin')
     <h1>User id: {{ Auth::user()->id }}</h1>
