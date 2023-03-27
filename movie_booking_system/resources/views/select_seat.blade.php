@@ -1,5 +1,7 @@
 <?php
     use App\Models\Movie;
+    use App\Models\Location;
+    use App\Models\Time;
 ?>
 
 <x-app-layout>
@@ -72,9 +74,9 @@
                 <div class="receipt-body">
                     <h1>Receipt</h1>
                     <p>Movie Title :  {{Movie::where('id', $data['movie'])->value('name')}}</p>
-                    <p>Cinema : {{$data['cinema']}}</p>
+                    <p>Cinema : {{Location::where('id', $data['cinema'])->value('name')}}</p>
                     <p>Date : {{$dDate}}</p>
-                    <p>Time : {{$data['time']}}</p>
+                    <p>Time : {{Time::where('id', $data['time'])->value('time')}}</p>
                     <div class="receipt-footer" id="receipt_footer"></div>
                 </div>
                 
