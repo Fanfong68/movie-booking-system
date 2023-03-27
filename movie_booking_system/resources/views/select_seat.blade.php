@@ -62,6 +62,7 @@
                     <p>Cinema : {{$data['cinema']}}</p>
                     <p>Date : {{$data['date']}}</p>
                     <p>Time : {{$data['time']}}</p>
+                    <p>Time : {{$data['time']}}</p>
                 </div>
                 <div class="receipt-footer"></div>
                 <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
