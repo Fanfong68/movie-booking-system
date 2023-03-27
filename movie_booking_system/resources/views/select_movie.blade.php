@@ -69,12 +69,46 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     <div class="button-container" id="button-container">
-                    <?php for ($i = 1; $i <= 5; $i++) { ?>
-                        <div class="date-button" onclick="toggleDate(this)" data-index="<?php echo $i; ?>">
-                            <span><?php echo $i; ?></span><br>
-                            <span class="smaller">Mar</span>
+                        <?php 
+                            $date1  = date("Y-m-d", strtotime("-2 day"));
+                            $date2  = date("Y-m-d", strtotime("-1 day"));
+                            $date3  = date("Y-m-d");
+                            $date4  = date("Y-m-d", strtotime("+1 day"));
+                            $date5  = date("Y-m-d", strtotime("+2 day"));
+
+                            $month1 = date('M', strtotime('-2 day'));
+                            $month2 = date('M', strtotime('-1 day'));
+                            $month3 = date('M');
+                            $month4 = date('M', strtotime('+1 day'));
+                            $month5 = date('M', strtotime('+2 day'));
+
+                            $day1   = date('j', strtotime('-2 day'));
+                            $day2   = date('j', strtotime('-1 day'));
+                            $day3   = date('j');
+                            $day4   = date('j', strtotime('+1 day'));
+                            $day5   = date('j', strtotime('+2 day'));
+
+                        ?>
+                        <div class="date-button" onclick="toggleDate(this)" data-index="1">
+                            <span><?php echo $day1; ?></span><br>
+                            <span class="smaller"><?php echo $month1; ?></span>
                         </div>
-                    <?php } ?>
+                        <div class="date-button" onclick="toggleDate(this)" data-index="2">
+                            <span><?php echo $day2; ?></span><br>
+                            <span class="smaller"><?php echo $month2; ?></span>
+                        </div>
+                        <div class="date-button" onclick="toggleDate(this)" data-index="3">
+                            <span><?php echo $day3; ?></span><br>
+                            <span class="smaller"><?php echo $month3; ?></span>
+                        </div>
+                        <div class="date-button" onclick="toggleDate(this)" data-index="4">
+                            <span><?php echo $day4; ?></span><br>
+                            <span class="smaller"><?php echo $month4; ?></span>
+                        </div>
+                        <div class="date-button" onclick="toggleDate(this)" data-index="5">
+                            <span><?php echo $day5; ?></span><br>
+                            <span class="smaller"><?php echo $month5; ?></span>
+                        </div>
                     </div>
                 </div>
             </div>
