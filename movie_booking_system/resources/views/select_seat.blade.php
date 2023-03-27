@@ -58,15 +58,15 @@
                 </div>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title :  {{Movie::find($data['movie'])->value('name')}}</p>
+                    <p>Movie Title :  {{Movie::where('id',$data['movie'] )-> value('name')}}</p>
                     <p>Cinema : {{$data['cinema']}}</p>
                     <p>Date : {{$data['date']}}</p>
                     <p>Time : {{$data['time']}}</p>
                     <div class="receipt-footer" id="receipt_footer"></div>
                 </div>
                 
-                <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
-                    <div class="text">{{ __('Proceed Payment') }}</div>
+                <div id="payment" class="payment w3-animate-bottom" onclick='loading(@json($data))'>
+                    <div class="text">Proceed Payment</div>
                 </div>
             </div>
         </div>
@@ -76,7 +76,15 @@
             </div>
         </div>
         
-           
+        <form action='/add_booking' method='POST'>
+            @csrf
+            <input type="text" id="movieS" value=0 hidden>
+            <input type="text" id="dateS" value=0 hidden>
+            <input type="text" id="timeS" value=0 hidden>
+            <input type="text" id="cinemaS" value=0 hidden>
+            <input type="text" id="seatS" value=0 hidden>
+            <button type="submit" hidden></button>
+        </form>
            
         <div class="page-container">
             <div id="proceed" class="proceed w3-animate-bottom">

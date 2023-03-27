@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::view('/select_seat/{data}','select_seat')->name('select_seat');
    
     Route::post('/submit_info',[BookingController::class,'submit_info'])->name('submit_info');
+    Route::post('/add_booking',[BookingController::class,'add_booking'])->name('add_booking');
+
 });
 
 

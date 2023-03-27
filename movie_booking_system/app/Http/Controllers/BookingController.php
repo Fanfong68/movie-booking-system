@@ -12,4 +12,9 @@ class BookingController extends Controller
         $data=$request->input();
         return view('/select_seat',['data'=>$data]);
     }
+
+    public function add_booking(Request $request){
+       
+        
+    }
 }

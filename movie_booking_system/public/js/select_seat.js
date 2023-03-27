@@ -60,10 +60,19 @@ function off() {
     document.getElementById("overlay-receipt-container").style.display = "none";
 }
 
-function loading(){
+function loading(data){
+    console.log(data['cinema']);
+    document.getElementById("movieS").value = data['movie'];
+    document.getElementById("dateS").value = data['date'];
+    document.getElementById("timeS").value = data['time'];
+    document.getElementById("cinemaS").value = data['cinema'];
+    document.getElementById("seatS").value = seat;
     document.getElementById("overlay-loading").style.display = "block";
+    
+   
     setTimeout(function() {
-        window.location.href = 'bookings_history'
+       
+       
     }, 2000); // 2 second
 }
 
