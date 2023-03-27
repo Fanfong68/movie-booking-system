@@ -23,6 +23,6 @@ class BookingController extends Controller
         $booking->date = $request->dateS;
         $booking->seat = $request->seatS;
         $booking->save();
-        return view('/bookings_history');
+        return redirect('/bookings_history');
     }
 }

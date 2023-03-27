@@ -63,5 +63,12 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    @can('isAdmin')
+    <h1>User id: {{ Auth::user()->id }}</h1>
+    @else
+    
+    @endcan
+    
 </x-app-layout>
