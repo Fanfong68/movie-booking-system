@@ -27,7 +27,7 @@
                 <tr>
                     <?php for($i=0;$i<5;$i++) { ?>
                         <td class="row" >
-                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>"></div>
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
@@ -35,7 +35,7 @@
 
                     <?php for($i=0;$i<15;$i++) { ?>
                         <td class="row">
-                            <div class="seat" onclick="toggleSeat(this)"  value="<?=$j?>-<?=$z?>"></div>
+                            <div class="seat" onclick="toggleSeat(this)"  value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
@@ -43,7 +43,7 @@
 
                     <?php for($i=0;$i<5;$i++) { ?>
                         <td class="row" >
-                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>"></div>
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
                 </tr>
@@ -57,13 +57,9 @@
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
                 <div id="text-receipt">Receipt</div>
-                <form>
-                    @csrf
-                    <input type="text" id="seat[]" name="seat" value='' hidden>
-                    <div id="payment" class="payment w3-animate-bottom" onclick="off();loading()">
-                        <div class="text">{{ __('Proceed Payment') }}</div>
-                    </div>
-                </form>
+                <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
+                    <div class="text">{{ __('Proceed Payment') }}</div>
+                </div>
             </div>
         </div>
         <div id="overlay-loading">
