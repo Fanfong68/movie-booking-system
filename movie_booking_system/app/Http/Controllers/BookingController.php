@@ -15,6 +15,6 @@ class BookingController extends Controller
 
     public function add_booking(Request $request){
        
-        
+        return view('/bookings_history');
     }
 }

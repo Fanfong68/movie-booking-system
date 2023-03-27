@@ -71,8 +71,7 @@ function loading(data){
     
    
     setTimeout(function() {
-       
-       
+        document.getElementById("add_booking_button").click();
     }, 2000); // 2 second
 }
 

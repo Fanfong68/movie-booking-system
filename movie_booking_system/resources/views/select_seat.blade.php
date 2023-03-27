@@ -96,7 +96,7 @@
             <input type="text" id="timeS" value=0 hidden>
             <input type="text" id="cinemaS" value=0 hidden>
             <input type="text" id="seatS" value=0 hidden>
-            <button type="submit" hidden></button>
+            <button type="submit" id="add_booking_button" hidden></button>
         </form>
            
         <div class="page-container">
