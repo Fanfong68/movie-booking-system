@@ -33,6 +33,7 @@ function toggleSeat(element){
 }
 
 function on() {
+
     document.getElementById("overlay-receipt-container").style.display = "block";
 }
 
