@@ -11,6 +11,24 @@ function checkSelection(){
         const proceedButton = document.getElementById('proceed');
         proceedButton.addEventListener('click', () => {
             console.log('Button clicked!');
+            
+            var receipt = document.getElementById('receipt_footer');
+            receipt.innerHTML='';
+            var seatstring='';
+            seat.forEach(function(perseat){
+               seatstring+=perseat+',';
+            });
+            var seatstring1 = seatstring.substr(0,seatstring.length-1);
+            displaycode = document.createElement("p");
+            displaycode.textContent = 'seat code:'+seatstring1;
+            displaycount = document.createElement("p");
+            displaycount.textContent = 'seat count:'+count;
+            displayprice = document.createElement("h3");
+            displayprice.textContent = 'Price:RM'+(count*12);
+            receipt.appendChild(displaycode);
+            receipt.appendChild(displaycount);
+            receipt.appendChild(displayprice);
+           
             on();
         });
     }else{
@@ -21,8 +39,10 @@ function checkSelection(){
 function toggleSeat(element){
     element.classList.toggle("selected");
     if(element.classList.contains('selected')){
+        if(!(seat.includes(element.id))){
+            seat.push(element.id);
+        }
         
-        seat.push(element.id);
         count++;
     }else{
         seat.splice(seat.indexOf(element.id), 1);
@@ -33,7 +53,6 @@ function toggleSeat(element){
 }
 
 function on() {
-
     document.getElementById("overlay-receipt-container").style.display = "block";
 }
 
