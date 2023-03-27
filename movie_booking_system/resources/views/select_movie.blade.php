@@ -106,7 +106,7 @@
             </div>
             <form action='/submit_info' method='POST'>
                 @csrf
-                <input type="text" id="movie" name="movie" value='0' hidden>
+                <input type="text" id="movie" name="movie" value='1' hidden>
                 <input type="text" id="date" name="date" value='0' hidden>
                 <input type="text" id="time" name="time" value='0' hidden>
                 <input type="text" id="cinema" name="cinema" value='0' hidden>
