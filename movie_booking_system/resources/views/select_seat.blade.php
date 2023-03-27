@@ -58,11 +58,13 @@
                 </div>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title: </p>
-                    <p>Cinema     : </p>
-                    <p>Date       : </p>
-                    <p>Time       : </p>
-                    <p>Seat Number: </p>
+                    <p>Movie Title : </p>
+                    <p>Cinema : </p>
+                    <p>Date : </p>
+                    <p>Time : </p>
+                    <p>Seat Number : </p>
+                    <p>Ticket Count : </p>
+                    <h2>Total Price : </h2>
                 </div>
                 <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
                     <div class="text">{{ __('Proceed Payment') }}</div>
