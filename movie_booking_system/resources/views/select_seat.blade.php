@@ -58,11 +58,13 @@
                 </div>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title:  {{Movie::find($data['movie'])->value('name')}}</p>
-                    <p>Cinema     : {{$data['cinema']}}</p>
-                    <p>Date       : {{$data['date']}}</p>
-                    <p>Time       : {{$data['time']}}</p>
-                    <p>Seat Number: </p>
+                    <p>Movie Title :  {{Movie::find($data['movie'])->value('name')}}</p>
+                    <p>Cinema : {{$data['cinema']}}</p>
+                    <p>Date : {{$data['date']}}</p>
+                    <p>Time : {{$data['time']}}</p>
+                    <p>Seat Number : </p>
+                    <p>Seat Count : </p>
+                    <h3>Total Price : RM</h3>
                 </div>
                 <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
                     <div class="text">{{ __('Proceed Payment') }}</div>
