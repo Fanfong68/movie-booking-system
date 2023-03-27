@@ -1,5 +1,7 @@
 <?php
     use App\Models\Movie;
+    use App\Models\Location;
+    use App\Models\Time;
 ?>
 
 <x-app-layout>
@@ -116,12 +118,11 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     <div class="button-container" id="button-container">
-                    <?php for ($j = 1; $j <= 5; $j++) { ?>
-                        <div class="time-button" onclick="toggleTime(this)" data-index="<?php echo $j; ?>">
-                            <span><?php echo $j; ?></span><br>
-                            <span class="smaller">Pm</span>
+                    @foreach(Time::all() as $time)
+                        <div class="time-button" onclick="toggleTime(this)" data-index="{{ __($time->id) }}">
+                            <span class="smaller">{{ __($time->time) }}</span>
                         </div>
-                    <?php } ?>
+                    @endforeach
                     </div>
                 </div>
             </div>
@@ -129,12 +130,11 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-xl text-gray-900 dark:text-gray-100">
                     <div class="button-container" id="button-container">
-                    <?php for ($j = 1; $j <= 5; $j++) { ?>
-                        <div class="cinema-button" onclick="toggleCinema(this)" data-index="<?php echo $j; ?>">
-                            <span class="smaller">Cinema</span>
-                            <span><?php echo $j; ?></span><br>
+                    @foreach(Location::all() as $cinema)
+                        <div class="cinema-button" onclick="toggleCinema(this)" data-index="{{ __($cinema->id) }}">
+                            <span class="smaller">{{ __($cinema->name) }}</span>
                         </div>
-                    <?php } ?>
+                    @endforeach
                     </div>
                 </div>
             </div>
