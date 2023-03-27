@@ -56,7 +56,14 @@
                 <div class="close-btn">
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
-                <div id="text-receipt">Receipt</div>
+                <div class="receipt-body">
+                    <h1>Receipt</h1>
+                    <p>Movie Title: </p>
+                    <p>Cinema     : </p>
+                    <p>Date       : </p>
+                    <p>Time       : </p>
+                    <p>Seat Number: </p>
+                </div>
                 <div id="payment" class="payment w3-animate-bottom" onclick="loading()">
                     <div class="text">{{ __('Proceed Payment') }}</div>
                 </div>
