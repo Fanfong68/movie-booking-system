@@ -56,11 +56,24 @@
                 <div class="close-btn">
                     <i class="fa fa-close" style="font-size:50px;" onclick="off()"></i>
                 </div>
+                <?php
+                    if($data['date'] == 1){
+                        $dDate = date("Y-m-d", strtotime("-2 day"));
+                    }else if($data['date'] == 2){
+                        $dDate = date("Y-m-d", strtotime("-1 day"));
+                    }else if($data['date'] == 3){
+                        $dDate = date("Y-m-d");
+                    }else if($data['date'] == 4){
+                        $dDate = date("Y-m-d", strtotime("+1 day"));
+                    }else if($data['date'] == 5){
+                        $dDate = date("Y-m-d", strtotime("+2 day"));
+                    }
+                ?>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title :  {{Movie::where('id',$data['movie'] )-> value('name')}}</p>
+                    <p>Movie Title :  {{Movie::find($data['movie'])->value('name')}}</p>
                     <p>Cinema : {{$data['cinema']}}</p>
-                    <p>Date : {{$data['date']}}</p>
+                    <p>Date : {{$dDate}}</p>
                     <p>Time : {{$data['time']}}</p>
                     <div class="receipt-footer" id="receipt_footer"></div>
                 </div>
