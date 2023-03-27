@@ -71,7 +71,7 @@
                 ?>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title :  {{Movie::find($data['movie'])->value('name')}}</p>
+                    <p>Movie Title :  {{Movie::where('id', $data['movie'])->value('name')}}</p>
                     <p>Cinema : {{$data['cinema']}}</p>
                     <p>Date : {{$dDate}}</p>
                     <p>Time : {{$data['time']}}</p>
