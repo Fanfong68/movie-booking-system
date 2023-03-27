@@ -11,11 +11,12 @@ function checkSelection(){
         const proceedButton = document.getElementById('proceed');
         proceedButton.addEventListener('click', () => {
             console.log('Button clicked!');
+            
             var receipt = document.getElementById('receipt_footer');
             receipt.innerHTML='';
             var seatstring='';
             seat.forEach(function(perseat){
-               seatstring+=seatstring+perseat+',';
+               seatstring+=perseat+',';
             });
             var seatstring1 = seatstring.substr(0,seatstring.length-1);
             displaycode = document.createElement("p");
