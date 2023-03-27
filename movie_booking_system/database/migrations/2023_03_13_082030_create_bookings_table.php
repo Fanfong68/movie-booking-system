@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('userid');
             $table->integer('locationid');
             $table->integer('timeid');
+            $table->string('seat');
             $table->date('date');
             $table->timestamps();
         });

@@ -28,7 +28,7 @@ function checkSelection(){
             receipt.appendChild(displaycode);
             receipt.appendChild(displaycount);
             receipt.appendChild(displayprice);
-           
+            document.getElementById("seatS").value = seatstring1;
             on();
         });
     }else{
@@ -63,15 +63,14 @@ function off() {
 function loading(data){
     console.log(data['cinema']);
     document.getElementById("movieS").value = data['movie'];
-    document.getElementById("dateS").value = data['date'];
     document.getElementById("timeS").value = data['time'];
     document.getElementById("cinemaS").value = data['cinema'];
-    document.getElementById("seatS").value = seat;
     document.getElementById("overlay-loading").style.display = "block";
     
    
     setTimeout(function() {
         document.getElementById("add_booking_button").click();
+        console.log(document.getElementById("movieS").value);
     }, 2000); // 2 second
 }
 

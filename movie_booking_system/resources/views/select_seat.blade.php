@@ -91,11 +91,11 @@
         
         <form action='/add_booking' method='POST'>
             @csrf
-            <input type="text" id="movieS" value=0 hidden>
-            <input type="text" id="dateS" value=0 hidden>
-            <input type="text" id="timeS" value=0 hidden>
-            <input type="text" id="cinemaS" value=0 hidden>
-            <input type="text" id="seatS" value=0 hidden>
+            <input type="text" id="movieS" name="movieS" value=0 hidden>
+            <input type="text" id="dateS" name="dateS" value='{{$dDate}}' hidden>
+            <input type="text" id="timeS" name="timeS" value=0 hidden>
+            <input type="text" id="cinemaS" name="cinemaS" value=0 hidden>
+            <input type="text" id="seatS" name="seatS" value=0 hidden>
             <button type="submit" id="add_booking_button" hidden></button>
         </form>
            
