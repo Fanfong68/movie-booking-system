@@ -13,7 +13,7 @@
     </head>
 
     <body>
-       <p>{{$data['movie']}}</p>
+       
         <div class="seat-container">
             <table>
                 <tr>
@@ -26,24 +26,24 @@
                     $z = 1;?>
                 <tr>
                     <?php for($i=0;$i<5;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row" >
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
                     <td class="walk"></td>
 
                     <?php for($i=0;$i<15;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row">
+                            <div class="seat" onclick="toggleSeat(this)"  value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
 
                     <td class="walk"></td>
 
                     <?php for($i=0;$i<5;$i++) { ?>
-                        <td class="row" value="<?=$j?>-<?=$z?>">
-                            <div class="seat" onclick="toggleSeat(this)"></div>
+                        <td class="row" >
+                            <div class="seat" onclick="toggleSeat(this)" value="<?=$j?>-<?=$z?>" id="<?=$j?>-<?=$z?>"></div>
                         </td>
                     <?php $z++; } ?>
                 </tr>
@@ -74,10 +74,16 @@
                 <p><i class="fa fa-spinner w3-text-white w3-spin" style="font-size:64px"></i></p>
             </div>
         </div>
+        
+           
+           
         <div class="page-container">
             <div id="proceed" class="proceed w3-animate-bottom">
                 <div class="text">{{ __('Confirm') }}</div>
             </div>
+    
         </div>
+           
+        
     </body>
 </x-app-layout>
