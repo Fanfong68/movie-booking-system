@@ -44,7 +44,7 @@
                                 <td>
                                     <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-edit"></i></a>
                                     &nbsp;&nbsp;&nbsp;
-                                    <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
+                                    <a onclick="confirm('Are you sure you want to delete this movie')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach
