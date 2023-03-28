@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Movie;
 
 class BookingController extends Controller
 {
@@ -24,5 +25,10 @@ class BookingController extends Controller
         $booking->seat = $request->seatS;
         $booking->save();
         return redirect('/bookings_history');
+    }
+
+    public function all_movie(){
+        $movie = Movie::paginate(3);
+        return view('/admin_panel',['movies'=>$movie]);
     }
 }

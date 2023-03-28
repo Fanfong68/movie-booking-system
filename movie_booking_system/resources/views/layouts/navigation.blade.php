@@ -23,7 +23,7 @@
                 </div>
                 @can('isAdmin')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('admin_panel')" :active="request()->routeIs('admin_panel')">
+                    <x-nav-link :href="route('get_admin_panel')" :active="request()->routeIs('get_admin_panel')">
                         {{ __('Admin Panel') }}
                     </x-nav-link>
                 </div>

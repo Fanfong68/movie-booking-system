@@ -36,7 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/add_booking',[BookingController::class,'add_booking'])->name('add_booking');
 
     //add middleware can:isAdmin to authorize
-    Route::view('/admin_panel','admin_panel' )->middleware('can:isAdmin')->name('admin_panel');
+    Route::view('/admin_panel/{movies}','admin_panel' )->middleware('can:isAdmin')->name('admin_panel');
+    Route::get('/get_admin_panel',[BookingController::class, 'all_movie'] )->middleware('can:isAdmin')->name('get_admin_panel');
     Route::view('/create_movie','create_movie' )->middleware('can:isAdmin')->name('create_movie');
 
 });

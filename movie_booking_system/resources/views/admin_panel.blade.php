@@ -24,7 +24,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(Movie::all() as $movie)
+                            @foreach($movies as $movie)
                             <tr>
                                 <td>{{ __($movie->id) }}</td>
                                 <td>
@@ -36,6 +36,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <span clas="paginate"> {{$movies->links()}} </span>
                     <button type="button" class="create-btn" onclick="window.location.href='{{ route('create_movie') }}'">Create New Movie</button>
                 </div>
             </div>
