@@ -69,4 +69,3 @@ function loading(data){
     }, 2000); // 2 second
 }
 
-//for get seat can select all seat and check whether is selected or not
