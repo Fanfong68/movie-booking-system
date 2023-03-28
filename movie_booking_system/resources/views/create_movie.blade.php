@@ -31,7 +31,7 @@
                             </tr>
                             <tr>
                                 <td><label for="poster">Movie Poster:</label></td>
-                                <td><input type="file" id="poster" name="poster" ></td>
+                                <td><input type="file" id="poster" name="poster"></td>
                             </tr>
                         </table>  
                      
