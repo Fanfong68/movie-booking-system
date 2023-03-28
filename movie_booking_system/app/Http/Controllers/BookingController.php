@@ -57,4 +57,9 @@ class BookingController extends Controller
 
         return redirect('/get_admin_panel');
      }
+
+     public function show_edit_movie(Request $request){
+        $movie = Movie::find($request->movieid);
+        return view('/show_edit_movie',['movies'=>$movie]);
+     }
 }
