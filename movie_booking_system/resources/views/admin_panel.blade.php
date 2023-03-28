@@ -36,7 +36,7 @@
                                 <td>
                                     <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-edit"></i></a>
                                     &nbsp;&nbsp;&nbsp;
-                                    <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
+                                    <a href="{{ route('delete_movie',['movieid'=>$movie->id]) }}" onclick="confirm('Are you sure to delete?')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

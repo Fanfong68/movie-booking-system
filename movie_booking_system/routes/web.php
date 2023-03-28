@@ -39,6 +39,9 @@ Route::middleware('auth')->group(function () {
     Route::view('/admin_panel/{movies}','admin_panel' )->middleware('can:isAdmin')->name('admin_panel');
     Route::get('/get_admin_panel',[BookingController::class, 'all_movie'] )->middleware('can:isAdmin')->name('get_admin_panel');
     Route::view('/create_movie','create_movie' )->middleware('can:isAdmin')->name('create_movie');
+    Route::post('/insert_movie',[BookingController::class, 'insert_movie'] )->middleware('can:isAdmin')->name('insert_movie');
+    Route::get('/delete_movie/{movieid}',[BookingController::class, 'delete_movie'] )->middleware('can:isAdmin')->name('delete_movie');
+
 
 });
 

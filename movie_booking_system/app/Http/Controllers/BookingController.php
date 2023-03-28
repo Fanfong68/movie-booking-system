@@ -31,4 +31,16 @@ class BookingController extends Controller
         $movie = Movie::paginate(3);
         return view('/admin_panel',['movies'=>$movie]);
     }
+
+    public function insert_movie(Request $request){
+       $movie = new Movie;
+       return redirect('/get_admin_panel');
+        
+    }
+
+    public function delete_movie(Request $request){
+      
+        
+        return redirect('/get_admin_panel');
+     }
 }
