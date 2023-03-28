@@ -22,6 +22,10 @@
                                 <th>Movie ID</th>
                                 <th>Poster</th>
                                 <th>Name</th>
+                                <th>Genre</th>
+                                <th>Duration</th>
+                                <th>Language</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,6 +37,10 @@
                                     <img src="{{ asset($movie->poster) }}">
                                 </td>
                                 <td>{{ __($movie->name) }}</td>
+                                <td>{{ __($movie->genre) }}</td>
+                                <td>{{ __($movie->duration) }}</td>
+                                <td>{{ __($movie->language) }}</td>
+                                <td>{{ __($movie->desc) }}</td>
                                 <td>
                                     <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-edit"></i></a>
                                     &nbsp;&nbsp;&nbsp;
