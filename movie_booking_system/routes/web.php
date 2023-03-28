@@ -27,7 +27,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('/dashboard','dashboard' )->name('dashboard');
-    Route::view('/admin_panel','admin_panel' )->middleware('can:isAdmin')->name('admin_panel');
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
     Route::view('/select_movie','select_movie')->name('select_movie');
@@ -35,6 +34,10 @@ Route::middleware('auth')->group(function () {
    
     Route::post('/submit_info',[BookingController::class,'submit_info'])->name('submit_info');
     Route::post('/add_booking',[BookingController::class,'add_booking'])->name('add_booking');
+
+    //add middleware can:isAdmin to authorize
+    Route::view('/admin_panel','admin_panel' )->middleware('can:isAdmin')->name('admin_panel');
+    Route::view('/create_movie','create_movie' )->middleware('can:isAdmin')->name('create_movie');
 
 });
 

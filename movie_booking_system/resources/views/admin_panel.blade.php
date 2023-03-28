@@ -36,7 +36,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <button type="button" class="create-btn">Create New Movie</button>
+                    <button type="button" class="create-btn" onclick="window.location.href='{{ route('create_movie') }}'">Create New Movie</button>
                 </div>
             </div>
         </div>
