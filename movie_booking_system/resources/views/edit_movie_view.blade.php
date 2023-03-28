@@ -33,7 +33,8 @@
                             </tr>
                         </table>
                         <input type="text" id="movieid" name="movieid" value={{$movies->id}} hidden>
-                        <button type="submit" class="edit-btn">Edit Movie</button>    
+                        <button type="submit" class="edit-btn">Save Edit</button>  
+                        <button type="cancel" class="cancel-btn">Cancel</button>     
                     </form>
                 </div>
             </div>

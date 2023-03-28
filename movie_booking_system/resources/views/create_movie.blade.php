@@ -34,9 +34,8 @@
                                 <td><input type="file" id="poster" name="poster" required></td>
                             </tr>
                         </table>
-                        
-                        
-                        <button type="submit" class="create-btn">Create New Movie</button>    
+                        <button type="submit" class="create-btn">Create New Movie</button> 
+                        <button type="cancel" class="cancel-btn">Cancel</button>   
                     </form>
                 </div>
             </div>
