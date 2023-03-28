@@ -38,11 +38,11 @@ div.container {
     position: absolute
 }
 .container .item-right .up-border {
-    top: -8px;
+    top: -15px;
     right: -35px;
 }
 .container .item-right .down-border {
-    bottom: -13px;
+    bottom: -50px;
     right: -35px;
 }
 .container .item-right .num {
