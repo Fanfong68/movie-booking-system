@@ -144,11 +144,16 @@
     text-align: center;
 }
 
-tbody {
+.receipt-table{
+    width:80%;
+    margin:auto;
+}
+
+.receipt-table-body {
     color: #666565;
 }
 
-tfoot {
+.receipt-table-foot {
     border-top: 1px solid #b4b4b4;
     font-weight: 600;
     font-size: large;

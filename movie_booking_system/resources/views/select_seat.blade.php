@@ -73,8 +73,8 @@
                 ?>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <table style="width:80%;margin:auto">
-                        <tbody>
+                    <table class="receipt-table">
+                        <tbody class="receipt-table-body">
                             <tr>
                                 <td>Movie Title :</td>
                                 <td align="right">{{Movie::where('id', $data['movie'])->value('name')}}</td>
@@ -100,7 +100,7 @@
                                 <td align="right" id="ticket_count"></td>
                             </tr>
                         </tbody>
-                        <tfoot>
+                        <tfoot class="receipt-table-foot">
                             <tr>
                                 <td>Total (RM)</td>
                                 <td align="right" id="total_price">$88.36</td>
