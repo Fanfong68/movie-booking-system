@@ -33,6 +33,14 @@ class BookingController extends Controller
     }
 
     public function insert_movie(Request $request){
+        $request->validate([
+            'movie'=>'required',
+            'genre'=>'required',
+            'duration'=>'required',
+            'lang'=>'required',
+            'desc'=>'required',
+            'poster'=>'required'
+        ]);
         $movie = new Movie;
         if($request->hasFile('poster')) {
             $file= $request->file('poster');
@@ -64,6 +72,14 @@ class BookingController extends Controller
      }
 
      public function edit_movie(Request $request){
+        $request->validate([
+            'movie'=>'required',
+            'genre'=>'required',
+            'duration'=>'required',
+            'lang'=>'required',
+            'desc'=>'required',
+            
+        ]);
         $movie = Movie::find($request->movieid);
         $movie->name =  $request->movie;
         $movie->genre = $request->genre;
