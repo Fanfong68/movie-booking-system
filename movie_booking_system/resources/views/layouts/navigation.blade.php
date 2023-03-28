@@ -21,11 +21,16 @@
                         {{ __('Bookings History') }}
                     </x-nav-link>
                 </div>
+                @can('isAdmin')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('promotion')" :active="request()->routeIs('promotion')">
-                        {{ __('Promotion') }}
+                    <x-nav-link :href="route('admin_panel')" :active="request()->routeIs('admin_panel')">
+                        {{ __('Admin Panel') }}
                     </x-nav-link>
                 </div>
+                @else
+                
+                @endcan
+               
             </div>
 
             <!-- Settings Dropdown -->
