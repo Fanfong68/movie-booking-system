@@ -103,7 +103,7 @@
                         <tfoot class="receipt-table-foot">
                             <tr>
                                 <td>Total (RM)</td>
-                                <td align="right" id="total_price">$88.36</td>
+                                <td align="right" id="total_price"></td>
                             </tr>
                         </tfoot>
                     </table>
