@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('/dashboard','dashboard' )->name('dashboard');
-    Route::view('/promotion','promotion' )->name('promotion');
+    Route::view('/admin_panel','admin_panel' )->name('admin_panel');
     Route::view('/bookings_history','bookings_history' )->name('bookings_history');
     Route::view('/book','book')->name('book');
     Route::view('/select_movie','select_movie')->name('select_movie');
