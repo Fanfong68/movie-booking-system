@@ -4,6 +4,8 @@
 
 <x-app-layout>
     <link rel="stylesheet" href="css/admin_panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Admin Panel') }}
@@ -31,7 +33,11 @@
                                     <img src="{{ asset($movie->poster) }}">
                                 </td>
                                 <td>{{ __($movie->name) }}</td>
-                                <td></td>
+                                <td>
+                                    <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-edit"></i></a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

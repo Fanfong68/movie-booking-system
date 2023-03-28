@@ -31,3 +31,7 @@ img{
 nav{
     margin-top: 20px;
 }
+
+.fa{
+    cursor:pointer
+}
