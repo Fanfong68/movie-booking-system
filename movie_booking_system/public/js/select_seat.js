@@ -19,15 +19,10 @@ function checkSelection(){
                seatstring+=perseat+',';
             });
             var seatstring1 = seatstring.substr(0,seatstring.length-1);
-            displaycode = document.createElement("p");
-            displaycode.textContent = 'Seat number : '+seatstring1;
-            displaycount = document.createElement("p");
-            displaycount.textContent = 'Ticket count : '+count;
             displayprice = document.createElement("h3");
-            displayprice.textContent = 'Price : RM'+(count*12);
-            receipt.appendChild(displaycode);
-            receipt.appendChild(displaycount);
-            receipt.appendChild(displayprice);
+            document.getElementById('seat_num').innerHTML = seatstring1;
+            document.getElementById('ticket_count').innerHTML = count;
+            document.getElementById('total_price').innerHTML = count*12;
             document.getElementById("seatS").value = seatstring1;
             on();
         });

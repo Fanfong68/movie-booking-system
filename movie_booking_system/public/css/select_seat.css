@@ -139,3 +139,17 @@
 .receipt-body {
     margin: 20px;
 }
+
+.receipt-body h1 {
+    text-align: center;
+}
+
+tbody {
+    color: #666565;
+}
+
+tfoot {
+    border-top: 1px solid #b4b4b4;
+    font-weight: 600;
+    font-size: large;
+}

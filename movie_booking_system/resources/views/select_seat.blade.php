@@ -73,10 +73,40 @@
                 ?>
                 <div class="receipt-body">
                     <h1>Receipt</h1>
-                    <p>Movie Title :  {{Movie::where('id', $data['movie'])->value('name')}}</p>
-                    <p>Cinema : {{Location::where('id', $data['cinema'])->value('name')}}</p>
-                    <p>Date : {{$dDate}}</p>
-                    <p>Time : {{Time::where('id', $data['time'])->value('time')}}</p>
+                    <table style="width:80%;margin:auto">
+                        <tbody>
+                            <tr>
+                                <td>Movie Title :</td>
+                                <td align="right">{{Movie::where('id', $data['movie'])->value('name')}}</td>
+                            </tr>
+                            <tr>
+                                <td>Cinema :</td>
+                                <td align="right">{{Location::where('id', $data['cinema'])->value('name')}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date :</td>
+                                <td align="right">{{$dDate}}</td>
+                            </tr>
+                            <tr>
+                                <td>Time :</td>
+                                <td align="right">{{Time::where('id', $data['time'])->value('time')}}</td>
+                            </tr>
+                            <tr>
+                                <td>Seat number :</td>
+                                <td align="right" id="seat_num"></td>
+                            </tr>
+                            <tr>
+                                <td>Ticket count :</td>
+                                <td align="right" id="ticket_count"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Total (RM)</td>
+                                <td align="right" id="total_price">$88.36</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                     <div class="receipt-footer" id="receipt_footer"></div>
                 </div>
                 
