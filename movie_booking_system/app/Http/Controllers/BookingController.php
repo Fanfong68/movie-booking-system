@@ -40,8 +40,6 @@ class BookingController extends Controller
             $file-> move(public_path('assets'), $filename);
             $movie->poster = '/assets/'.$filename;
         }
-       
-        
         $movie->name =  $request->movie;
         $movie->genre = $request->genre;
         $movie->duration = $request->duration;
