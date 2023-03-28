@@ -35,7 +35,7 @@
                             </tr>
                         </table>  
                      
-                        <button type="button" class="create-btn">Create New Movie</button>    
+                        <button type="submit" class="create-btn">Create New Movie</button>    
                     </form>
                 </div>
             </div>

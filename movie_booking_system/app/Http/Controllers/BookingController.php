@@ -33,7 +33,21 @@ class BookingController extends Controller
     }
 
     public function insert_movie(Request $request){
-      
+        $movie = new Movie;
+        if($request->file('poster')){
+         $file= $request->file('poster');
+         $filename= $file->getClientOriginalName();
+         $file-> move(public_path('/assets'), $filename);
+         $movie->poster = '/assets'.$filename;
+        }
+        $movie->name =  $request->movie;
+        $movie->poster = 'asset/'.$request->poster;
+        $movie->genre = $request->genre;
+        $movie->duration = $request->duration;
+        $movie->language = $request->lang;
+        $movie->desc =$request->desc;
+        $movie->nowShowing=1;
+        $movie->save();
        return redirect('/get_admin_panel');
         
     }
