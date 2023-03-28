@@ -18,7 +18,7 @@ class LocationSeeder extends Seeder
         ]);
 
         DB::table('locations')->insert([
-            'name'=>"Sunway Piramid",
+            'name'=>"Sunway Pyramid",
         ]);
 
         DB::table('locations')->insert([
@@ -26,7 +26,7 @@ class LocationSeeder extends Seeder
         ]);
 
         DB::table('locations')->insert([
-            'name'=>"Eco Chera Mall",
+            'name'=>"Eco Cheras Mall",
         ]);
 
         DB::table('locations')->insert([
