@@ -52,7 +52,7 @@ class BookingController extends Controller
     }
 
     public function delete_movie(Request $request){
-        $movie = Movie::find($request->movieid);
+        $movie = Movie::find($request->movieid)->get();
         $movie->delete();
 
         return redirect('/get_admin_panel');
@@ -60,6 +60,17 @@ class BookingController extends Controller
 
      public function show_edit_movie(Request $request){
         $movie = Movie::find($request->movieid);
-        return view('/show_edit_movie',['movies'=>$movie]);
+        return view('/edit_movie_view',['movies'=>$movie]);
+     }
+
+     public function edit_movie(Request $request){
+        $movie = Movie::find($request->movieid);
+        $movie->name =  $request->movie;
+        $movie->genre = $request->genre;
+        $movie->duration = $request->duration;
+        $movie->language = $request->lang;
+        $movie->desc =$request->desc;
+        $movie->save();
+        return redirect('/get_admin_panel');
      }
 }

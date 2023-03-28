@@ -6,37 +6,33 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action='/insert_movie' method='POST' enctype="multipart/form-data">
+                    <form action='/edit_movie' method='POST' enctype="multipart/form-data">
                         @csrf
                         <table class="submit-table">
                             <tr>
                                 <td><label for="movie">Movie Name:</label></td>
-                                <td><input type="text" id="movie" name="movie"></td>
+                                <td><input type="text" id="movie" name="movie" value='{{$movies->name}}'></td>
                             </tr>
                             <tr>
                                 <td><label for="genre">Movie Genre:</label></td>
-                                <td><input type="text" id="genre" name="genre"></td>
+                                <td><input type="text" id="genre" name="genre" value='{{$movies->genre}}'></td>
                             </tr>
                             <tr>
                                 <td><label for="duration">Movie Duration:</label></td>
-                                <td><input type="text" id="duration" name="duration"></td>
+                                <td><input type="text" id="duration" name="duration" value='{{$movies->duration}}'></td>
                             </tr>
                             <tr>
                                 <td><label for="lang">Movie Language:</label></td>
-                                <td><input type="text" id="lang" name="lang"></td>
+                                <td><input type="text" id="lang" name="lang" value='{{$movies->language}}'></td>
                             </tr>
                             <tr>
                                 <td><label for="desc">Movie Description:</label></td>
-                                <td><input type="text" id="desc" name="desc"></td>
+                                <td><input type="text" id="desc" name="desc" value='{{$movies->desc}}'></td>
                             </tr>
-                            <tr>
-                                <td><label for="poster">Movie Poster:</label></td>
-                                <td><input type="file" id="poster" name="poster"></td>
-                            </tr>
+                         
                         </table>
-                        
-                        
-                        <button type="submit" class="create-btn">Create New Movie</button>    
+                        <input type="text" id="movieid" name="movieid" value={{$movies->id}} hidden>
+                        <button type="submit" class="create-btn">Edit Movie</button>    
                     </form>
                 </div>
             </div>

@@ -42,7 +42,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/insert_movie',[BookingController::class, 'insert_movie'] )->middleware('can:isAdmin')->name('insert_movie');
     Route::get('/delete_movie/{movieid}',[BookingController::class, 'delete_movie'] )->middleware('can:isAdmin')->name('delete_movie');
     Route::get('/show_edit_movie/{movieid}',[BookingController::class, 'show_edit_movie'] )->middleware('can:isAdmin')->name('show_edit_movie');
-
+    Route::view('/edit_movie_view/{movies}','edit_movie_view' )->middleware('can:isAdmin')->name('edit_movie_view');
+    Route::post('/edit_movie',[BookingController::class, 'edit_movie'] )->middleware('can:isAdmin')->name('edit_movie');
 });
 
 
