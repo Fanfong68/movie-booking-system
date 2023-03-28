@@ -11,23 +11,23 @@
                         <table class="submit-table">
                             <tr>
                                 <td><label for="movie">Movie Name:</label></td>
-                                <td><input type="text" id="movie" name="movie" value='{{$movies->name}}'></td>
+                                <td><input type="text" id="movie" name="movie" value='{{$movies->name}}' required></td>
                             </tr>
                             <tr>
                                 <td><label for="genre">Movie Genre:</label></td>
-                                <td><input type="text" id="genre" name="genre" value='{{$movies->genre}}'></td>
+                                <td><input type="text" id="genre" name="genre" value='{{$movies->genre}}' required></td>
                             </tr>
                             <tr>
                                 <td><label for="duration">Movie Duration:</label></td>
-                                <td><input type="text" id="duration" name="duration" value='{{$movies->duration}}'></td>
+                                <td><input type="text" id="duration" name="duration" value='{{$movies->duration}}' required></td>
                             </tr>
                             <tr>
                                 <td><label for="lang">Movie Language:</label></td>
-                                <td><input type="text" id="lang" name="lang" value='{{$movies->language}}'></td>
+                                <td><input type="text" id="lang" name="lang" value='{{$movies->language}}' required></td>
                             </tr>
                             <tr>
                                 <td><label for="desc">Movie Description:</label></td>
-                                <td><input type="text" id="desc" name="desc" value='{{$movies->desc}}'></td>
+                                <td><input type="text" id="desc" name="desc" value='{{$movies->desc}}' required></td>
                             </tr>
                          
                         </table>

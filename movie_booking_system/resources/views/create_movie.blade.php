@@ -11,27 +11,27 @@
                         <table class="submit-table">
                             <tr>
                                 <td><label for="movie">Movie Name:</label></td>
-                                <td><input type="text" id="movie" name="movie"></td>
+                                <td><input type="text" id="movie" name="movie" required></td>
                             </tr>
                             <tr>
                                 <td><label for="genre">Movie Genre:</label></td>
-                                <td><input type="text" id="genre" name="genre"></td>
+                                <td><input type="text" id="genre" name="genre" required></td>
                             </tr>
                             <tr>
                                 <td><label for="duration">Movie Duration:</label></td>
-                                <td><input type="text" id="duration" name="duration"></td>
+                                <td><input type="text" id="duration" name="duration" required></td>
                             </tr>
                             <tr>
                                 <td><label for="lang">Movie Language:</label></td>
-                                <td><input type="text" id="lang" name="lang"></td>
+                                <td><input type="text" id="lang" name="lang" required></td>
                             </tr>
                             <tr>
                                 <td><label for="desc">Movie Description:</label></td>
-                                <td><input type="text" id="desc" name="desc"></td>
+                                <td><input type="text" id="desc" name="desc" required></td>
                             </tr>
                             <tr>
                                 <td><label for="poster">Movie Poster:</label></td>
-                                <td><input type="file" id="poster" name="poster"></td>
+                                <td><input type="file" id="poster" name="poster" required></td>
                             </tr>
                         </table>
                         
