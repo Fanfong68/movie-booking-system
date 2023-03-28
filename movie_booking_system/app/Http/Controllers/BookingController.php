@@ -33,14 +33,15 @@ class BookingController extends Controller
     }
 
     public function insert_movie(Request $request){
-       $movie = new Movie;
+      
        return redirect('/get_admin_panel');
         
     }
 
     public function delete_movie(Request $request){
-      
-        
+        $movie = Movie::find($request->movieid);
+        $movie->delete();
+
         return redirect('/get_admin_panel');
      }
 }
