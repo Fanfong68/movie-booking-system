@@ -33,8 +33,7 @@
                                 <td><label for="poster">Movie Poster:</label></td>
                                 <td><input type="file" id="poster" name="poster"></td>
                             </tr>
-                        </table>  
-                     
+                        </table>
                         <button type="submit" class="create-btn">Create New Movie</button>    
                     </form>
                 </div>

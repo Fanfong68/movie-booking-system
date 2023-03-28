@@ -22,6 +22,10 @@
                                 <th>Movie ID</th>
                                 <th>Poster</th>
                                 <th>Name</th>
+                                <th>Genre</th>
+                                <th>Duration</th>
+                                <th>Language</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,10 +37,14 @@
                                     <img src="{{ asset($movie->poster) }}">
                                 </td>
                                 <td>{{ __($movie->name) }}</td>
+                                <td>{{ __($movie->genre) }}</td>
+                                <td>{{ __($movie->duration) }}</td>
+                                <td>{{ __($movie->language) }}</td>
+                                <td>{{ __($movie->desc) }}</td>
                                 <td>
                                     <a onclick="alert('button click')"><i style="font-size:medium;" class="fa fa-edit"></i></a>
                                     &nbsp;&nbsp;&nbsp;
-                                    <a href="{{ route('delete_movie',['movieid'=>$movie->id]) }}" onclick="confirm('Are you sure to delete?')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
+                                    <a onclick="confirm('Are you sure you want to delete this movie')"><i style="font-size:medium;" class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach
